@@ -3,4 +3,8 @@
         Form1.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Tbox_vis_TextChanged(sender As Object, e As EventArgs)
+        vinkelA = vinkelA
+    End Sub
 End Class
