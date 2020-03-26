@@ -39,6 +39,7 @@ Partial Class Form1
         Me.But_Nulstil = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.But_Beregn = New System.Windows.Forms.Button()
+        Me.But_luk = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -182,12 +183,22 @@ Partial Class Form1
         Me.But_Beregn.Text = "Beregn"
         Me.But_Beregn.UseVisualStyleBackColor = True
         '
+        'But_luk
+        '
+        Me.But_luk.Location = New System.Drawing.Point(29, 371)
+        Me.But_luk.Name = "But_luk"
+        Me.But_luk.Size = New System.Drawing.Size(140, 50)
+        Me.But_luk.TabIndex = 20
+        Me.But_luk.Text = "Luk Program"
+        Me.But_luk.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.But_luk)
         Me.Controls.Add(Me.But_Beregn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.But_Nulstil)
@@ -230,4 +241,5 @@ Partial Class Form1
     Friend WithEvents But_Nulstil As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents But_Beregn As Button
+    Friend WithEvents But_luk As Button
 End Class
