@@ -3,8 +3,7 @@
         Form1.Show()
         Me.Hide()
     End Sub
-
-    Private Sub Tbox_vis_TextChanged(sender As Object, e As EventArgs)
-        vinkelA = vinkelA
+    Private Sub Beregner()
+        'Kæmpe if statement hvor vi bruger case, hvis vi har A B og C så skal vi en ting, hvis vi har A B og c skal vi noget andet og så videre.
     End Sub
 End Class
