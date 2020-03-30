@@ -37,10 +37,10 @@ Partial Class Form1
         Me.Lbl_Sb = New System.Windows.Forms.Label()
         Me.Lbl_Sa = New System.Windows.Forms.Label()
         Me.But_Nulstil = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Pbox_billeder = New System.Windows.Forms.PictureBox()
         Me.But_Beregn = New System.Windows.Forms.Button()
         Me.But_luk = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Pbox_billeder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Tbox_Va
@@ -172,13 +172,13 @@ Partial Class Form1
         Me.But_Nulstil.Text = "Nulstil"
         Me.But_Nulstil.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Pbox_billeder
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(394, 49)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(300, 300)
-        Me.PictureBox1.TabIndex = 18
-        Me.PictureBox1.TabStop = False
+        Me.Pbox_billeder.Location = New System.Drawing.Point(394, 49)
+        Me.Pbox_billeder.Name = "Pbox_billeder"
+        Me.Pbox_billeder.Size = New System.Drawing.Size(300, 300)
+        Me.Pbox_billeder.TabIndex = 18
+        Me.Pbox_billeder.TabStop = False
         '
         'But_Beregn
         '
@@ -206,7 +206,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.But_luk)
         Me.Controls.Add(Me.But_Beregn)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Pbox_billeder)
         Me.Controls.Add(Me.But_Nulstil)
         Me.Controls.Add(Me.Lbl_Sc)
         Me.Controls.Add(Me.Lbl_Sb)
@@ -224,7 +224,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Tbox_Va)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Pbox_billeder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -245,7 +245,7 @@ Partial Class Form1
     Friend WithEvents Lbl_Sb As Label
     Friend WithEvents Lbl_Sa As Label
     Friend WithEvents But_Nulstil As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Pbox_billeder As PictureBox
     Friend WithEvents But_Beregn As Button
     Friend WithEvents But_luk As Button
 End Class
