@@ -4,19 +4,21 @@
         Form2.Show()
         Me.Hide()
 
-        Dim va As Decimal = CDec(Tbox_Va.Text)
+
+        va = CDec(Tbox_Va.Text)
         vinkelA = va
-        Dim vb As Decimal = CDec(Tbox_Vb.Text)
+        vb = CDec(Tbox_Vb.Text)
         vinkelB = vb
-        Dim vc As Decimal = CDec(Tbox_Vb.Text)
+        vc = CDec(Tbox_Vc.Text)
         vinkelB = vc
 
-        Dim sa As Decimal = CDec(Tbox_Vb.Text)
+        sa = CDec(Tbox_Sa.Text)
         vinkelB = sa
-        Dim sb As Decimal = CDec(Tbox_Vb.Text)
+        sb = CDec(Tbox_Sb.Text)
         vinkelB = sb
-        Dim sc As Decimal = CDec(Tbox_Vb.Text)
+        sc = CDec(Tbox_Sc.Text)
         vinkelB = sc
+
     End Sub
 
     Private Sub But_Nulstil_Click(sender As Object, e As EventArgs) Handles But_Nulstil.Click
@@ -31,7 +33,6 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pbox_billeder.Image = My.Resources.Clean
     End Sub
-
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click
         Pbox_billeder.Image = My.Resources.A
     End Sub
