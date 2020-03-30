@@ -12,11 +12,24 @@
 
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Lbl_vis.Text = vinkelA
+        Lbl_vis.Text = vinkelB
+        Lbl_vis.Text = sideA
+        Lbl_vis.Text = sideB
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pi = 2 * Math.Asin(1)
-        MsgBox(pi)
+        If sideA & vinkelA & sideB > 0 Then
+            X = (pi * 180) * vinkelA
+            Y = (sideA * sideB) / X
+            vinkelB = (180 / pi) * Y
+
+        End If
+
+
+
+        pi = 2 * Math.Asin(1)
+        'MsgBox(pi)
 
     End Sub
 End Class
