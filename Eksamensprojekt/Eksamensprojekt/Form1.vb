@@ -18,6 +18,7 @@
         Dim sc As Decimal = CDec(Tbox_Vb.Text)
         vinkelB = sc
 
+
     End Sub
 
     Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click
@@ -35,6 +36,10 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub Tbox_Sc_TextChanged(sender As Object, e As EventArgs) Handles Tbox_Sc.TextChanged
 
     End Sub
 End Class
