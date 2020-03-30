@@ -1,5 +1,6 @@
 ﻿Public Class Form2
     Dim pi As Single
+    Dim clickmix As Decimal
     Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
         Form1.Show()
         Me.Hide()
@@ -18,18 +19,17 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        clickmix = vinkelA
         pi = 2 * Math.Asin(1)
         If sideA & vinkelA & sideB > 0 Then
             X = (pi * 180) * vinkelA
             Y = (sideA * sideB) / X
             vinkelB = (180 / pi) * Y
 
+            MsgBox(vinkelA & vinkelB)
         End If
+        MsgBox(clickmix)
 
-
-
-        pi = 2 * Math.Asin(1)
-        'MsgBox(pi)
 
     End Sub
 End Class
