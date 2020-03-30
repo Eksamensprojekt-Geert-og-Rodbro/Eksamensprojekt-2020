@@ -174,7 +174,7 @@ Partial Class Form1
         '
         'Pbox_billeder
         '
-        Me.Pbox_billeder.Location = New System.Drawing.Point(394, 49)
+        Me.Pbox_billeder.Location = New System.Drawing.Point(404, 49)
         Me.Pbox_billeder.Name = "Pbox_billeder"
         Me.Pbox_billeder.Size = New System.Drawing.Size(300, 300)
         Me.Pbox_billeder.TabIndex = 18
