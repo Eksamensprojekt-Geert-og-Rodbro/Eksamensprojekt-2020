@@ -1,20 +1,40 @@
 ﻿Public Class Form1
+    Dim nulstil
+    Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
+        Form2.Show()
+        Me.Hide()
 
+        Dim va As Decimal = CDec(Tbox_Va.Text)
+        vinkelA = va
+        Dim vb As Decimal = CDec(Tbox_Vb.Text)
+        vinkelB = vb
+        Dim vc As Decimal = CDec(Tbox_Vb.Text)
+        vinkelB = vc
+
+        Dim sa As Decimal = CDec(Tbox_Vb.Text)
+        vinkelB = sa
+        Dim sb As Decimal = CDec(Tbox_Vb.Text)
+        vinkelB = sb
+        Dim sc As Decimal = CDec(Tbox_Vb.Text)
+        vinkelB = sc
+
+    End Sub
 
     Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click
         End
     End Sub
 
-    Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
-        Form2.Show()
-        Me.Hide()
+    Private Sub But_Nulstil_Click(sender As Object, e As EventArgs) Handles But_Nulstil.Click
+        Tbox_Va.Text = "0"
+        Tbox_Vb.Text = "0"
+        Tbox_Vc.Text = "0"
 
-        vinkelA = CDec(Tbox_Va.Text)
-        vinkelB = CDec(Tbox_Vb.Text)
-        vinkelC = CDec(Tbox_Vc.Text)
+        Tbox_Sa.Text = "0"
+        Tbox_Sb.Text = "0"
+        Tbox_Sc.Text = "0"
+    End Sub
 
-        sideA = CDec(Tbox_Sa.Text)
-        sideB = CDec(Tbox_Sb.Text)
-        sideC = CDec(Tbox_Sc.Text)
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class

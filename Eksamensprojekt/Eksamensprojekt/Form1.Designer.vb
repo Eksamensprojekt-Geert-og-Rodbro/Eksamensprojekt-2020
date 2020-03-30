@@ -49,6 +49,7 @@ Partial Class Form1
         Me.Tbox_Va.Name = "Tbox_Va"
         Me.Tbox_Va.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Va.TabIndex = 0
+        Me.Tbox_Va.Text = "0"
         '
         'Tbox_Vb
         '
@@ -56,6 +57,7 @@ Partial Class Form1
         Me.Tbox_Vb.Name = "Tbox_Vb"
         Me.Tbox_Vb.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Vb.TabIndex = 1
+        Me.Tbox_Vb.Text = "0"
         '
         'Tbox_Vc
         '
@@ -63,6 +65,7 @@ Partial Class Form1
         Me.Tbox_Vc.Name = "Tbox_Vc"
         Me.Tbox_Vc.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Vc.TabIndex = 2
+        Me.Tbox_Vc.Text = "0"
         '
         'Lbl_vinkler
         '
@@ -88,6 +91,7 @@ Partial Class Form1
         Me.Tbox_Sc.Name = "Tbox_Sc"
         Me.Tbox_Sc.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Sc.TabIndex = 9
+        Me.Tbox_Sc.Text = "0"
         '
         'Tbox_Sb
         '
@@ -95,6 +99,7 @@ Partial Class Form1
         Me.Tbox_Sb.Name = "Tbox_Sb"
         Me.Tbox_Sb.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Sb.TabIndex = 8
+        Me.Tbox_Sb.Text = "0"
         '
         'Tbox_Sa
         '
@@ -102,6 +107,7 @@ Partial Class Form1
         Me.Tbox_Sa.Name = "Tbox_Sa"
         Me.Tbox_Sa.Size = New System.Drawing.Size(100, 20)
         Me.Tbox_Sa.TabIndex = 7
+        Me.Tbox_Sa.Text = "0"
         '
         'Lbl_Va
         '
