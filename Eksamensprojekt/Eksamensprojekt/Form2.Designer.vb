@@ -28,9 +28,10 @@ Partial Class Form2
         '
         'But_tilbage
         '
-        Me.But_tilbage.Location = New System.Drawing.Point(561, 346)
+        Me.But_tilbage.Location = New System.Drawing.Point(748, 426)
+        Me.But_tilbage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.But_tilbage.Name = "But_tilbage"
-        Me.But_tilbage.Size = New System.Drawing.Size(75, 23)
+        Me.But_tilbage.Size = New System.Drawing.Size(100, 28)
         Me.But_tilbage.TabIndex = 0
         Me.But_tilbage.Text = "Tilbage"
         Me.But_tilbage.UseVisualStyleBackColor = True
@@ -38,20 +39,21 @@ Partial Class Form2
         'Lbl_vis
         '
         Me.Lbl_vis.AutoSize = True
-        Me.Lbl_vis.Location = New System.Drawing.Point(56, 48)
+        Me.Lbl_vis.Location = New System.Drawing.Point(75, 59)
+        Me.Lbl_vis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Lbl_vis.Name = "Lbl_vis"
-        Me.Lbl_vis.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_vis.Size = New System.Drawing.Size(51, 17)
         Me.Lbl_vis.TabIndex = 1
         Me.Lbl_vis.Text = "Label1"
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(812, 449)
+        Me.ClientSize = New System.Drawing.Size(1083, 553)
         Me.Controls.Add(Me.Lbl_vis)
         Me.Controls.Add(Me.But_tilbage)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form2"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
