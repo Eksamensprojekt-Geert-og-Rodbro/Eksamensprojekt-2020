@@ -45,6 +45,7 @@
 
 
 
+
         'Hvis vi har sideB, vinkelA og sideC
         If sideB + vinkelA + sideC > 0 Then
             C = Math.Asin((Math.Sin(A) * c1) / a1)
