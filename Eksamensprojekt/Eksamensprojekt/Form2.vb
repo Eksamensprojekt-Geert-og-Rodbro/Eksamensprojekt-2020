@@ -12,20 +12,27 @@
     End Sub
 
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'Lbl_vis.Text = vinkelA
-        'Lbl_vis.Text = vinkelB
-        'Lbl_vis.Text = sideA
-        'Lbl_vis.Text = sideB
+
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        A = vinkelA
+        B = vinkelB
+        C = vinkelB
+        a1 = sideA
+        b1 = sideB
+        c1 = sideC
+        If sideA + vinkelB + sideB > 0 Then
+            A = 
+
+        End If
+
 
         If sideA + vinkelA + sideB > 0 Then
-            A = vinkelA '* Math.PI / 180
-            B = Math.Asin((Math.Sin(A) * sideB) / sideA)
-            vinkelB = (180 / Math.PI) * B
-            vinkelA = (180 / Math.PI) * A
-            MsgBox(vinkelA & "   " & vinkelB)
+            B = Math.Asin((Math.Sin(A) * b1) / a1)
+            vinkelB = (180 / pi) * B
+            vinkelA = (180 / pi) * A
+            MsgBox("A: " & vinkelA & " B: " & vinkelB)
         End If
 
         Lbl_vis.Text = vinkelA

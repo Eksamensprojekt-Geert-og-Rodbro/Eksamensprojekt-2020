@@ -3,11 +3,11 @@
     Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
 
         va = CDec(Tbox_Va.Text)
-        vinkelA = va * Math.PI / 180
+        vinkelA = va * pi / 180
         vb = CDec(Tbox_Vb.Text)
-        vinkelB = vb * Math.PI / 180
+        vinkelB = vb * pi / 180
         vc = CDec(Tbox_Vc.Text)
-        vinkelC = vc * Math.PI / 180
+        vinkelC = vc * pi / 180
 
         sa = CDec(Tbox_Sa.Text)
         sideA = sa
