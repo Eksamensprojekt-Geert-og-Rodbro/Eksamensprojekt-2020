@@ -29,6 +29,7 @@
             MsgBox(vinkelA & "   " & vinkelB)
         End If
         'MsgBox(clickmix)
+
         Lbl_vis.Text = vinkelA
         Lbl_vis.Text = vinkelB
         Lbl_vis.Text = sideA
