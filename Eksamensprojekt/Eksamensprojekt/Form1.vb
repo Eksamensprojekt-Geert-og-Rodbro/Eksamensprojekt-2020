@@ -10,14 +10,14 @@
         vb = CDec(Tbox_Vb.Text)
         vinkelB = vb
         vc = CDec(Tbox_Vc.Text)
-        vinkelB = vc
+        vinkelC = vc
 
         sa = CDec(Tbox_Sa.Text)
-        vinkelB = sa
+        sideA = sa
         sb = CDec(Tbox_Sb.Text)
-        vinkelB = sb
+        sideB = sb
         sc = CDec(Tbox_Sc.Text)
-        vinkelB = sc
+        sideC = sc
 
     End Sub
 
@@ -36,9 +36,6 @@
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click
         Pbox_billeder.Image = My.Resources.A
     End Sub
-    Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click
-        End
-    End Sub
     Private Sub Tbox_Vb_Click(sender As Object, e As EventArgs) Handles Tbox_Vb.Click
         Pbox_billeder.Image = My.Resources.B
     End Sub
@@ -56,5 +53,8 @@
 
     Private Sub Tbox_Sc_Click(sender As Object, e As EventArgs) Handles Tbox_Sc.Click
         Pbox_billeder.Image = My.Resources.c_lille
+
+    End Sub Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click
+        End
     End Sub
 End Class
