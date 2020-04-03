@@ -62,4 +62,11 @@
     Private Sub Tbox_Sc_Click(sender As Object, e As EventArgs) Handles Tbox_Sc.Click
         Pbox_billeder.Image = My.Resources.c_lille
     End Sub
+
+
+
+
+
+
+
 End Class

@@ -27,7 +27,7 @@
 
         End If
 
-
+        'Hvis vi har sideA, vinkelA og sideB
         If sideA + vinkelA + sideB > 0 Then
             B = Math.Asin((Math.Sin(A) * b1) / a1)
             vinkelB = (180 / pi) * B
@@ -35,10 +35,23 @@
             MsgBox("A: " & vinkelA & " B: " & vinkelB)
         End If
 
+
         Lbl_vis.Text = vinkelA
         Lbl_vis.Text = vinkelB
         Lbl_vis.Text = sideA
         Lbl_vis.Text = sideB
+
+
+
+
+
+        'Hvis vi har sideB, vinkelA og sideC
+        If sideB + vinkelA + sideC > 0 Then
+            C = Math.Asin((Math.Sin(A) * c1) / a1)
+            vinkelB = (180 / pi) * B
+            vinkelA = (180 / pi) * A
+            MsgBox("A: " & vinkelA & " B: " & vinkelB)
+        End If
 
     End Sub
 End Class
