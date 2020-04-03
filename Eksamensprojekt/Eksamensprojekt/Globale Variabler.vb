@@ -1,7 +1,7 @@
 ﻿Module Globale_Variabler
     Public vinkelA, vinkelB, vinkelC, sideA, sideB, sideC As Decimal
     Public A, B, C, a1, b1, c1 As Single
-    Public pi As Integer
+    Public pi As Decimal
 
     Public va As Decimal
     Public vb As Decimal
