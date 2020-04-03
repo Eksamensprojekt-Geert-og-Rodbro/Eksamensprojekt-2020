@@ -3,11 +3,11 @@
     Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
 
         va = CDec(Tbox_Va.Text)
-        vinkelA = va * pi / 180
+        vinkelA = va
         vb = CDec(Tbox_Vb.Text)
-        vinkelB = vb * pi / 180
+        vinkelB = vb
         vc = CDec(Tbox_Vc.Text)
-        vinkelC = vc * pi / 180
+        vinkelC = vc
 
         sa = CDec(Tbox_Sa.Text)
         sideA = sa
@@ -36,7 +36,6 @@
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pbox_billeder.Image = My.Resources.Clean
-        pi = Math.PI
     End Sub
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click
         Pbox_billeder.Image = My.Resources.A
