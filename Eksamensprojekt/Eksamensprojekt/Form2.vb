@@ -1,6 +1,4 @@
 ﻿Public Class Form2
-    Dim pi As Single
-    Dim clickmix As Decimal
     Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
         Form1.Show()
         Me.Hide()
@@ -27,7 +25,7 @@
 
         End If
 
-
+        'Hvis vi har side A, side B og Vinkel A
         If sideA + vinkelA + sideB > 0 Then
             B = Math.Asin((Math.Sin(A) * b1) / a1)
             vinkelB = (180 / Math.PI) * B
