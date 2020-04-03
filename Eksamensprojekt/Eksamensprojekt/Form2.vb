@@ -12,39 +12,33 @@
     End Sub
 
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'Lbl_vis.Text = vinkelA
-        'Lbl_vis.Text = vinkelB
-        'Lbl_vis.Text = sideA
-        'Lbl_vis.Text = sideB
+
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        A = vinkelA
+        B = vinkelB
+        C = vinkelB
+        a1 = sideA
+        b1 = sideB
+        c1 = sideC
+        If sideA + vinkelB + sideB > 0 Then
+            A = 
+
+        End If
 
 
-
-
-
-
-
-
-
-
-
-
-        'Udregning Vinkel B
-        If sideA + vinkelA + sideB > 0 Then ' Her tjekkes om der er indtastet noget på vores vinkler og sider. 
-            A = vinkelA 'Angiver VinkelA til A
-            B = Math.Asin((Math.Sin(A) * sideB) / sideA) 'Udregner med Arcussinus og finder vinkel B i radianer
-            vinkelB = (180 / Math.PI) * B 'Omregner til grader
-            vinkelA = (180 / Math.PI) * A 'Omregner til grader
-            MsgBox(vinkelA & "   " & vinkelB) ' Viser i MSGboks
+        If sideA + vinkelA + sideB > 0 Then
+            B = Math.Asin((Math.Sin(A) * b1) / a1)
+            vinkelB = (180 / pi) * B
+            vinkelA = (180 / pi) * A
+            MsgBox("A: " & vinkelA & " B: " & vinkelB)
         End If
 
         Lbl_vis.Text = vinkelA
         Lbl_vis.Text = vinkelB
         Lbl_vis.Text = sideA
         Lbl_vis.Text = sideB
-
 
     End Sub
 End Class
