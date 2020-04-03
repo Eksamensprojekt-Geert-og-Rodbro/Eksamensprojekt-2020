@@ -19,8 +19,7 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'clickmix = vinkelA
-        'pi = 2 * Math.Asin(1)
+
         If sideA + vinkelA + sideB > 0 Then
             A = vinkelA '* Math.PI / 180
             B = Math.Asin((Math.Sin(A) * sideB) / sideA)
@@ -28,7 +27,6 @@
             vinkelA = (180 / Math.PI) * A
             MsgBox(vinkelA & "   " & vinkelB)
         End If
-        'MsgBox(clickmix)
 
         Lbl_vis.Text = vinkelA
         Lbl_vis.Text = vinkelB
