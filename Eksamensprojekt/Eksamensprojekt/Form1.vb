@@ -10,14 +10,14 @@
         vb = CDec(Tbox_Vb.Text)
         vinkelB = vb
         vc = CDec(Tbox_Vc.Text)
-        vinkelB = vc
+        vinkelC = vc
 
         sa = CDec(Tbox_Sa.Text)
-        vinkelB = sa
+        sideA = sa
         sb = CDec(Tbox_Sb.Text)
-        vinkelB = sb
+        sideB = sb
         sc = CDec(Tbox_Sc.Text)
-        vinkelB = sc
+        sideC = sc
 
     End Sub
 
