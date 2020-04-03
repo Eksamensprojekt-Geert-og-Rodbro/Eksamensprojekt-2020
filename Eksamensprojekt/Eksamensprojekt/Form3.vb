@@ -7,15 +7,7 @@
         b1 = sideB
         c1 = sideC
 
-        'Hvis vi har Side A, Side B og Vinkel B
-        If sideA + sideB + vinkelB > 0 Then
-            A = Math.Asin((Math.Sin(B) * a1) / b1)
-            vinkelA = (180 / Math.PI) * B
-            vinkelB = (180 / Math.PI) * A
-            vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelC = Math.PI / 180
-            sideC = Math.Sin(C) * a1 / Math.Sin(A)
-        End If
+
 
         'Hvis vi har Side A, Side B og Vinkel C
         If sideA + sideB + vinkelB > 0 Then

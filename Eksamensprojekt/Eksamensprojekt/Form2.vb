@@ -20,13 +20,9 @@
         a1 = sideA
         b1 = sideB
         c1 = sideC
-        If sideA + vinkelB + sideB > 0 Then
-            'A = 
-
-        End If
 
         'Hvis vi har side A, side B og Vinkel A
-        If sideA + vinkelA + sideB > 0 Then
+        If sideA > 0 And sideB > 0 And vinkelA > 0 Then
             'regner VinkelB, i radian, ved hjælp af cosinusrelationen
             B = Math.Asin((Math.Sin(A) * b1) / a1)
             'Laver radianerne for vinkelB om til grader
@@ -37,6 +33,15 @@
             C = vinkelC * Math.PI / 180
             'Udregner side c ud fra sinusrelation
             sideC = (Math.Sin(C) * a1) / Math.Sin(A)
+
+            'Hvis vi har Side A, Side B og Vinkel B
+        ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then
+            A = Math.Asin((Math.Sin(B) * a1) / b1)
+            vinkelA = (180 / Math.PI) * B
+            vinkelB = (180 / Math.PI) * A
+            vinkelC = 180 - vinkelA - vinkelB
+            C = vinkelC = Math.PI / 180
+            sideC = Math.Sin(C) * a1 / Math.Sin(A)
         End If
 
         Lbl_vis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
