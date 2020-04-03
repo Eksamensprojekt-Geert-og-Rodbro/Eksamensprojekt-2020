@@ -1,16 +1,13 @@
 ﻿Public Class Form1
     Dim nulstil
     Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
-        Form2.Show()
-        Me.Hide()
-
 
         va = CDec(Tbox_Va.Text)
-        vinkelA = va
+        vinkelA = va * Math.PI / 180
         vb = CDec(Tbox_Vb.Text)
-        vinkelB = vb
+        vinkelB = vb * Math.PI / 180
         vc = CDec(Tbox_Vc.Text)
-        vinkelC = vc
+        vinkelC = vc * Math.PI / 180
 
         sa = CDec(Tbox_Sa.Text)
         sideA = sa
@@ -19,6 +16,13 @@
         sc = CDec(Tbox_Sc.Text)
         sideC = sc
 
+        Form2.Lbl_vis.Text = vinkelA
+        Form2.Lbl_vis.Text = vinkelB
+        Form2.Lbl_vis.Text = sideA
+        Form2.Lbl_vis.Text = sideB
+
+        Form2.Show()
+        Me.Hide()
     End Sub
 
     Private Sub But_Nulstil_Click(sender As Object, e As EventArgs) Handles But_Nulstil.Click
