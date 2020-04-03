@@ -36,6 +36,7 @@
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pbox_billeder.Image = My.Resources.Clean
+        pi = Math.PI
     End Sub
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click
         Pbox_billeder.Image = My.Resources.A
