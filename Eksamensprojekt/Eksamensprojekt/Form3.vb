@@ -9,17 +9,6 @@
 
 
 
-        'Hvis vi har Side A, Side B og Vinkel C
-        If sideA + sideB + vinkelB > 0 Then
-
-
-            A = Math.Asin((Math.Sin(B) * a1) / b1)
-            vinkelA = (180 / Math.PI) * B
-            vinkelB = (180 / Math.PI) * A
-            vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelC = Math.PI / 180
-        End If
-
 
         Lbl_vis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
 
