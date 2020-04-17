@@ -2,7 +2,24 @@
     Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
         Form1.Show()
         Me.Hide()
-
+        vinkelA = 0
+        vinkelB = 0
+        vinkelC = 0
+        sideA = 0
+        sideB = 0
+        sideC = 0
+        A = 0
+        B = 0
+        C = 0
+        a1 = 0
+        b1 = 0
+        c1 = 0
+        va = 0
+        vb = 0
+        vc = 0
+        sa = 0
+        sb = 0
+        sc = 0
     End Sub
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
