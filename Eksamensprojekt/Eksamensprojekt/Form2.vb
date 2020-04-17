@@ -65,7 +65,7 @@
             c1 = sideC
 
             A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2) / 2 * b1 * c1)
-            A = Format(A, "###.##")
+            A = Format(A, "###.##") 'Fungerer ikke endnu
             vinkelA = 180 / Math.PI * A
 
             B = Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / 2 * a1 * c1)
