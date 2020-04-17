@@ -94,6 +94,7 @@
 
             'Hvis vi har Side b, Side c og Vinkel B
 
+
             'Hvis vi har Side b, Side c og Vinkel C
 
 
