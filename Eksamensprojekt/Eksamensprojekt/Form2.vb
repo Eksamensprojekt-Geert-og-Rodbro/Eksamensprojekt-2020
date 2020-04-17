@@ -9,8 +9,6 @@
 
     End Sub
 
-    Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -128,6 +126,10 @@
 
 
         Lbl_vis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
+
+    End Sub
+
+
 
     End Sub
 End Class
