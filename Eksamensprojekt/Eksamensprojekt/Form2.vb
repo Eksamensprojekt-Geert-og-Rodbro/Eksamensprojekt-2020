@@ -2,12 +2,9 @@
     Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
         Form1.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Beregner()
-        'Kæmpe if statement hvor vi bruger case, hvis vi har A B og C så skal vi en ting, hvis vi har A B og c skal vi noget andet og så videre.
 
     End Sub
+    Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
     End Sub
 
@@ -38,8 +35,8 @@
             vinkelA = (180 / Math.PI) * B
             vinkelB = (180 / Math.PI) * A
             vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelC = Math.PI / 180
-            sideC = Math.Sin(C) * a1 / Math.Sin(A)
+            C = vinkelC * Math.PI / 180
+            sideC = ((Math.Sin(C) * a1) / (Math.Sin(A)))
 
             'Hvis vi har Side a, Side b og Vinkel C
         ElseIf sideA > 0 And sideB > 0 And vinkelC > 0 Then
@@ -125,11 +122,8 @@
 
 
 
-        Lbl_vis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
+        Tbox_Vavis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
 
     End Sub
 
-
-
-    End Sub
 End Class

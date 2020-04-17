@@ -16,10 +16,7 @@
         sc = CDec(Tbox_Sc.Text)
         sideC = sc
 
-        Form2.Lbl_vis.Text = vinkelA
-        Form2.Lbl_vis.Text = vinkelB
-        Form2.Lbl_vis.Text = sideA
-        Form2.Lbl_vis.Text = sideB
+
 
         Form2.Show()
         Me.Hide()
