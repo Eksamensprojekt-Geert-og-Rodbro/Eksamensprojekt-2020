@@ -20,6 +20,7 @@
         sa = 0
         sb = 0
         sc = 0
+        'Spasser
     End Sub
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
