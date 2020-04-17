@@ -46,6 +46,7 @@
             'Hvis vi har Side a, Side b og Vinkel C
         ElseIf sideA > 0 And sideB > 0 And vinkelC > 0 Then
             sideC = Math.Sqrt(a1 ^ 2 + b1 ^ 2 - 2 * a1 * b1 * Math.Cos(C))
+            c1 = sideC
 
             A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2) / 2 * b1 * c1)
             vinkelA = (180 / Math.PI) * A
@@ -54,7 +55,7 @@
             vinkelB = (180 / Math.PI) * B
 
             'Hvis vi har Side a, Side c og Vinkel A
-        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then
+        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then 'HALLO KIG LIGE HER SPASSERE
             C = Math.Asin((Math.Sin(A) * c1 / a1))
             vinkelC = vinkelC * Math.PI / 180
 
@@ -67,6 +68,7 @@
             'Hvis vi har Side a, Side c og Vinkel B
         ElseIf sideA > 0 And sideC > 0 And vinkelB > 0 Then
             sideB = Math.Sqrt(a1 ^ 2 + c1 ^ 2 - 2 * a1 * c1 * Math.Cos(B))
+            b1 = sideB
 
             A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2 / 2 * b1 * c1))
             vinkelA = (180 / Math.PI) * A
@@ -85,11 +87,15 @@
             sideB = (Math.Sin(B) * a1 / Math.Sin(A))
 
             'Hvis vi har Side b, Side c og Vinkel A
-
+        ElseIf sideB > 0 And sideC > 0 And vinkelA > 0 Then
             sideA = Math.Sqrt(b1 ^ 2 + c1 ^ 2 - 2 * b1 * c1 * Math.Cos(A))
+            a1 = sideA
 
-            B = Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / 2 * a1 * c1)
-            vinkelB
+            B = Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / (2 * a1 * c1))
+            vinkelB = (180 / Math.PI) * B
+
+            C = Math.Acos((a1 ^ 2 + b1 ^ 2 - c1 ^ 2) / (2 * a1 * b1))
+            vinkelC = (180 / Math.PI) * C
 
 
             'Hvis vi har Side b, Side c og Vinkel B
