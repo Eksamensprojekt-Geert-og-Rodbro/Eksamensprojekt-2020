@@ -7,7 +7,7 @@
         b1 = sideB
         c1 = sideC
 
-        'Hvis vi har Side b, Side c og Vinkel B
+
 
 
         Lbl_vis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
