@@ -4,7 +4,10 @@
         Me.Hide()
 
     End Sub
+
+
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+
 
     End Sub
 
@@ -125,5 +128,6 @@
         Tbox_Vavis.Text = "A:" & vinkelA & " B:" & vinkelB & " C:" & vinkelC & " a:" & sideA & " b:" & sideB & " c:" & sideC
 
     End Sub
+
 
 End Class
