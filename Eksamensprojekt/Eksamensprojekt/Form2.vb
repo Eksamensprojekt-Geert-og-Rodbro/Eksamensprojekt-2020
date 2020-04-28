@@ -20,7 +20,7 @@
         sa = 0
         sb = 0
         sc = 0
-
+        'Spasser
     End Sub
 
 
@@ -50,7 +50,6 @@
             'Udregner side c ud fra sinusrelation
             sideC = (Math.Sin(C) * a1) / Math.Sin(A)
 
-
             'Hvis vi har Side a, Side b og Vinkel B
         ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then
             A = Math.Asin((Math.Sin(B) * a1) / b1)
@@ -61,7 +60,7 @@
             sideC = ((Math.Sin(C) * a1) / (Math.Sin(A)))
 
             'Hvis vi har Side a, Side b og Vinkel C
-        ElseIf sideA > 0 And sideB > 0 And vinkelC > 0 Then 'vIRKER IKKE
+        ElseIf sideA > 0 And sideB > 0 And vinkelC > 0 Then
             sideC = Math.Sqrt(a1 ^ 2 + b1 ^ 2 - 2 * a1 * b1 * Math.Cos(C))
             c1 = sideC
 
@@ -75,12 +74,13 @@
 
 
             'Hvis vi har Side a, Side c og Vinkel A
-        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then
+        ElseIf sideA > 0 And sideC > 0 And vinkelA > 0 Then 'HALLO KIG LIGE HER SPASSERE
             C = Math.Asin((Math.Sin(A) * c1 / a1))
             vinkelC = vinkelC * Math.PI / 180
 
-            vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelB * Math.PI / 180
+            vinkelB = 180 - vinkelA - vinkelC
+            B = vinkelB * Math.PI / 180
+
 
             sideB = (Math.Sin(B) * a1 / Math.Sin(A))
 
