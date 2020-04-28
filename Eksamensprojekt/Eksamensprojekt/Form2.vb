@@ -72,13 +72,15 @@
             B = Format(B, "###.##")
             vinkelB = (180 / Math.PI) * B
 
+
             'Hvis vi har Side a, Side c og Vinkel A
-        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then 'HALLO KIG LIGE HER SPASSERE
+        ElseIf sideA > 0 And sideC > 0 And vinkelA > 0 Then 'HALLO KIG LIGE HER SPASSERE
             C = Math.Asin((Math.Sin(A) * c1 / a1))
             vinkelC = vinkelC * Math.PI / 180
 
-            vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelB * Math.PI / 180
+            vinkelB = 180 - vinkelA - vinkelC
+            B = vinkelB * Math.PI / 180
+
 
             sideB = (Math.Sin(B) * a1 / Math.Sin(A))
 
