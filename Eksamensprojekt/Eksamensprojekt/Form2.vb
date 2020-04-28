@@ -1,4 +1,7 @@
-﻿Public Class Form2
+﻿'Indsæt paranteser for at fikse overflow
+' kører alle udregninger igennem på cossincalc
+
+Public Class Form2
     Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
         Form1.Show()
         Me.Hide()
@@ -38,7 +41,7 @@
         c1 = sideC
 
         'Hvis vi har side a, side b og Vinkel A
-        If sideA > 0 And sideB > 0 And vinkelA > 0 Then
+        If sideA > 0 And sideB > 0 And vinkelA > 0 Then 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             'regner VinkelB, i radian, ved hjælp af cosinusrelationen
             B = Math.Asin((Math.Sin(A) * b1) / a1)
             'Laver radianerne for vinkelB om til grader
@@ -50,8 +53,9 @@
             'Udregner side c ud fra sinusrelation
             sideC = (Math.Sin(C) * a1) / Math.Sin(A)
 
+
             'Hvis vi har Side a, Side b og Vinkel B
-        ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then
+        ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             A = Math.Asin((Math.Sin(B) * a1) / b1)
             vinkelA = (180 / Math.PI) * B
             vinkelB = (180 / Math.PI) * A
@@ -59,28 +63,28 @@
             C = vinkelC * Math.PI / 180
             sideC = ((Math.Sin(C) * a1) / (Math.Sin(A)))
 
-            'Hvis vi har Side a, Side b og Vinkel C
+
+            'Hvis vi har Side a, Side b og Vinkel C 
         ElseIf sideA > 0 And sideB > 0 And vinkelC > 0 Then
             sideC = Math.Sqrt(a1 ^ 2 + b1 ^ 2 - 2 * a1 * b1 * Math.Cos(C))
             c1 = sideC
 
-            A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2) / 2 * b1 * c1)
+            A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2) / (2 * b1 * c1))
             A = Format(A, "###.##") 'Fungerer ikke endnu
-            vinkelA = 180 / Math.PI * A
+            vinkelA = (180 / Math.PI) * A
 
-            B = Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / 2 * a1 * c1)
-            B = Format(B, "###.##")
+            B = Math.Round(Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / (2 * a1 * c1)), 2)
+            ' B = Format(B, "###.##")
             vinkelB = (180 / Math.PI) * B
 
 
-            'Hvis vi har Side a, Side c og Vinkel A
-        ElseIf sideA > 0 And sideC > 0 And vinkelA > 0 Then 'HALLO KIG LIGE HER SPASSERE
-            C = Math.Asin((Math.Sin(A) * c1 / a1))
-            vinkelC = vinkelC * Math.PI / 180
+            'Hvis vi har Side a, Side c og Vinkel A 'aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        ElseIf sideA > 0 And sideC > 0 And vinkelA > 0 Then
+            C = Math.Asin((Math.Sin(A) * c1) / a1)
+            vinkelC = 180 / Math.PI * C
 
             vinkelB = 180 - vinkelA - vinkelC
-            B = vinkelB * Math.PI / 180
-
+            B = vinkelB * Math.PI / 18
 
             sideB = (Math.Sin(B) * a1 / Math.Sin(A))
 
@@ -97,7 +101,7 @@
             vinkelC = (180 / Math.PI) * C
 
             'Hvis vi har Side a, Side c og Vinkel C
-        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then
+        ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             A = Math.Asin(Math.Sin(C) * a1 / c1)
             vinkelA = (180 / Math.PI) * A
 
@@ -107,7 +111,7 @@
             sideB = (Math.Sin(B) * a1 / Math.Sin(A))
 
             'Hvis vi har Side b, Side c og Vinkel A
-        ElseIf sideB > 0 And sideC > 0 And vinkelA > 0 Then
+        ElseIf sideB > 0 And sideC > 0 And vinkelA > 0 Then 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             sideA = Math.Sqrt(b1 ^ 2 + c1 ^ 2 - 2 * b1 * c1 * Math.Cos(A))
             a1 = sideA
 
@@ -119,25 +123,27 @@
 
 
             'Hvis vi har Side b, Side c og Vinkel B
-        ElseIf sideB > 0 And sideC > 0 And vinkelB > 0 Then
+        ElseIf sideB > 0 And sideC > 0 And vinkelB > 0 Then 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             C = Math.Asin((Math.Sin(B) * c1) / b1)
             vinkelC = (180 / Math.PI) * C
 
-            A = 180 - B - C
-            vinkelA = (180 / Math.PI) * A
+            vinkelA = 180 - vinkelB - vinkelC
+            A = vinkelA * Math.PI / 180
 
             sideA = (Math.Sin(A) * b1) / Math.Sin(B)
             a1 = sideA
 
             'Hvis vi har Side b, Side c og Vinkel C
         ElseIf sideB > 0 And sideC > 0 And vinkelC > 0 Then
-            B = Math.Asin((Math.Sin(C) * b1))
+            B = Math.Asin((Math.Sin(C) * b1) / c1)
             B = vinkelB * Math.PI / 180
 
-            A = 180 - B - C
-            vinkelA = (180 / Math.PI) * A
+            vinkelA = 180 - vinkelB - vinkelC
+            A = vinkelA * Math.PI / 180
 
-            sideA = (Math.Sin(A) * b1 / Math.Sin(B))
+            vinkelA = Math.Round(((180 / Math.PI) * A), 2)
+
+            sideA = ((Math.Sin(A) * b1) / Math.Sin(B))
             a1 = sideA
 
 
