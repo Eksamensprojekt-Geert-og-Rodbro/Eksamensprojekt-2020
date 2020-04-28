@@ -65,14 +65,12 @@
             c1 = sideC
 
             A = Math.Acos((b1 ^ 2 + c1 ^ 2 - a1 ^ 2) / 2 * b1 * c1)
-
-            vinkelA = (180 / Math.PI) * A
-            A = Format(A, "###.##")
+            A = Format(A, "###.##") 'Fungerer ikke endnu
+            vinkelA = 180 / Math.PI * A
 
             B = Math.Acos((a1 ^ 2 + c1 ^ 2 - b1 ^ 2) / 2 * a1 * c1)
             B = Format(B, "###.##")
             vinkelB = (180 / Math.PI) * B
-
 
             'Hvis vi har Side a, Side c og Vinkel A
         ElseIf sideA > 0 And sideC > 0 And vinkelC > 0 Then 'HALLO KIG LIGE HER SPASSERE
