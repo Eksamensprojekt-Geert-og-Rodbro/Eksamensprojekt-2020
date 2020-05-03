@@ -2,26 +2,17 @@
     Dim nulstil
     Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
 
-        'va = CDec(Tbox_Va.Text)
-        'vinkelA = va
-        'vb = CDec(Tbox_Vb.Text)
-        'vinkelB = vb
-        'vc = CDec(Tbox_Vc.Text)
-        'vinkelC = vc
+        vinkelA = CDec(Tbox_Va.Text) 'Sætter Variablen vinkelA = texten/tallet i textboxen
 
-        'sa = CDec(Tbox_Sa.Text)
-        'sideA = sa
-        'sb = CDec(Tbox_Sb.Text)
-        'sideB = sb
-        'sc = CDec(Tbox_Sc.Text)
-        'sideC = sc
+        vinkelB = CDec(Tbox_Vb.Text) 'Sætter Variablen vinkelB = texten/tallet i textboxen
 
-        vinkelA = CDec(Tbox_Va.Text)
-        vinkelB = CDec(Tbox_Vb.Text)
-        vinkelC = CDec(Tbox_Vc.Text)
-        sideA = CDec(Tbox_Sa.Text)
-        sideB = CDec(Tbox_Sb.Text)
-        sideC = CDec(Tbox_Sc.Text)
+        vinkelC = CDec(Tbox_Vc.Text) 'Sætter Variablen vinkelC = texten/tallet i textboxen
+
+        sideA = CDec(Tbox_Sa.Text) 'Sætter Variablen sideA = texten/tallet i textboxen
+
+        sideB = CDec(Tbox_Sb.Text) 'Sætter Variablen sideB = texten/tallet i textboxen
+
+        sideC = CDec(Tbox_Sc.Text) 'Sætter Variablen sideC = texten/tallet i textboxen
 
 
         Form2.Show()
@@ -49,12 +40,7 @@
         a1 = 0
         b1 = 0
         c1 = 0
-        va = 0
-        vb = 0
-        vc = 0
-        sa = 0
-        sb = 0
-        sc = 0
+
 
         Me.Text = vinkelA
 
@@ -113,12 +99,6 @@
         a1 = 0
         b1 = 0
         c1 = 0
-        va = 0
-        vb = 0
-        vc = 0
-        sa = 0
-        sb = 0
-        sc = 0
 
     End Sub
 End Class
