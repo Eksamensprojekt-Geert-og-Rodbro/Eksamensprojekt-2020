@@ -2,20 +2,26 @@
     Dim nulstil
     Private Sub But_Beregn_Click(sender As Object, e As EventArgs) Handles But_Beregn.Click
 
-        va = CDec(Tbox_Va.Text)
-        vinkelA = va
-        vb = CDec(Tbox_Vb.Text)
-        vinkelB = vb
-        vc = CDec(Tbox_Vc.Text)
-        vinkelC = vc
+        'va = CDec(Tbox_Va.Text)
+        'vinkelA = va
+        'vb = CDec(Tbox_Vb.Text)
+        'vinkelB = vb
+        'vc = CDec(Tbox_Vc.Text)
+        'vinkelC = vc
 
-        sa = CDec(Tbox_Sa.Text)
-        sideA = sa
-        sb = CDec(Tbox_Sb.Text)
-        sideB = sb
-        sc = CDec(Tbox_Sc.Text)
-        sideC = sc
+        'sa = CDec(Tbox_Sa.Text)
+        'sideA = sa
+        'sb = CDec(Tbox_Sb.Text)
+        'sideB = sb
+        'sc = CDec(Tbox_Sc.Text)
+        'sideC = sc
 
+        vinkelA = CDec(Tbox_Va.Text)
+        vinkelB = CDec(Tbox_Vb.Text)
+        vinkelC = CDec(Tbox_Vc.Text)
+        sideA = CDec(Tbox_Sa.Text)
+        sideB = CDec(Tbox_Sb.Text)
+        sideC = CDec(Tbox_Sc.Text)
 
 
         Form2.Show()
@@ -61,8 +67,8 @@
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click 'Aktiverer når man trykker på Tbox_Va
         Pbox_billeder.Image = My.Resources.A
     End Sub
-    Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click
-        End
+    Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click 'Aktiveres når man trykker på knappen luk
+        End 'Lukker programmet
     End Sub
     Private Sub Tbox_Vb_Click(sender As Object, e As EventArgs) Handles Tbox_Vb.Click 'Aktiverer når man trykker på Tbox_Vb
         Pbox_billeder.Image = My.Resources.B
