@@ -15,8 +15,8 @@
         sideC = CDec(Tbox_Sc.Text) 'Sætter Variablen sideC = texten/tallet i textboxen
 
 
-        Form2.Show()
-        Me.Hide()
+        Form2.Show() 'Viser form 2 
+        Me.Hide() 'Gemmer form 1
     End Sub
 
     Private Sub But_Nulstil_Click(sender As Object, e As EventArgs) Handles But_Nulstil.Click
