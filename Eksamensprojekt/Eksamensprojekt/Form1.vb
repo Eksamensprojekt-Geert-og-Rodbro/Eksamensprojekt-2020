@@ -30,9 +30,33 @@
         Tbox_Sa.Text = "0"
         Tbox_Sb.Text = "0"
         Tbox_Sc.Text = "0"
+
+        vinkelA = 0
+        vinkelB = 0
+        vinkelC = 0
+        sideA = 0
+        sideB = 0
+        sideC = 0
+        A = 0
+        B = 0
+        C = 0
+        a1 = 0
+        b1 = 0
+        c1 = 0
+        va = 0
+        vb = 0
+        vc = 0
+        sa = 0
+        sb = 0
+        sc = 0
+
+        Me.Text = vinkelA
+
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Pbox_billeder.Image = My.Resources.Clean
+
+
     End Sub
     Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click
         Pbox_billeder.Image = My.Resources.A
@@ -59,10 +83,36 @@
         Pbox_billeder.Image = My.Resources.c_lille
     End Sub
 
+    Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Controls.Clear()
+        InitializeComponent()
+        Me.Text = "asdad"
+        Tbox_Va.Text = "0"
+        Tbox_Vb.Text = "0"
+        Tbox_Vc.Text = "0"
 
+        Tbox_Sa.Text = "0"
+        Tbox_Sb.Text = "0"
+        Tbox_Sc.Text = "0"
 
+        vinkelA = 0
+        vinkelB = 0
+        vinkelC = 0
+        sideA = 0
+        sideB = 0
+        sideC = 0
+        A = 0
+        B = 0
+        C = 0
+        a1 = 0
+        b1 = 0
+        c1 = 0
+        va = 0
+        vb = 0
+        vc = 0
+        sa = 0
+        sb = 0
+        sc = 0
 
-
-
-
+    End Sub
 End Class
