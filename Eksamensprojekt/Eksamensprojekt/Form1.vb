@@ -86,7 +86,7 @@
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Controls.Clear()
         InitializeComponent()
-        Me.Text = "asdad"
+
         Tbox_Va.Text = "0"
         Tbox_Vb.Text = "0"
         Tbox_Vc.Text = "0"
