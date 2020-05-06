@@ -2,21 +2,20 @@
 ' kører alle udregninger igennem på cossincalc
 
 Public Class Form2
-    Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click
+    Private Sub But_tilbage_Click(sender As Object, e As EventArgs) Handles But_tilbage.Click 'Aktiverer når man klikker på knappen tilbage
+        Form1.Show() 'Viser form 1
+        Me.Hide() 'Gemmer form 2
+    End Sub 'stopper sub rutinen
 
-        Form1.Show()
-        Me.Hide()
-    End Sub
 
-
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        A = vinkelA * Math.PI / 180
-        B = vinkelB * Math.PI / 180
-        C = vinkelC * Math.PI / 180
-        a1 = sideA
-        b1 = sideB
-        c1 = sideC
-        Me.Text = A & " " & B & " " & C
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Starter subrutinen når form 2 loader
+        A = vinkelA * Math.PI / 180 'Trækker variablen for vinkelA fra indtastnings form og regner den om til radian(A)
+        B = vinkelB * Math.PI / 180 'Trækker variablen for vinkelB fra indtastnings form og regner den om til radian(B)
+        C = vinkelC * Math.PI / 180 'Trækker variablen for vinkelC fra indtastnings form og regner den om til radian(C)
+        a1 = sideA 'Sætter a1 til at være lig med sideA som er indtastet på forrige form
+        b1 = sideB 'Sætter b1 til at være lig med sideB som er indtastet på forrige form
+        c1 = sideC 'Sætter c1 til at være lig med sideC som er indtastet på forrige form
+        Me.Text = "Udregning" 'Sætter navnet 
 
 
         'Hvis vi har side a, side b og Vinkel A
@@ -35,12 +34,11 @@ Public Class Form2
 
             'Hvis vi har Side a, Side b og Vinkel B
         ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then
-            A = Math.Asin((Math.Sin(B) * a1) / b1)
-            vinkelA = (180 / Math.PI) * B
-            vinkelB = (180 / Math.PI) * A
-            vinkelC = 180 - vinkelA - vinkelB
-            C = vinkelC * Math.PI / 180
-            sideC = ((Math.Sin(C) * a1) / (Math.Sin(A)))
+            A = Math.Asin((Math.Sin(B) * a1) / b1) 'Her bruger vi sinusrelationen hvor der er isoleret for vinkel A
+            vinkelA = (180 / Math.PI) * A 'Omregner Radianen der er udregnet ovenfor til grader
+            vinkelC = 180 - vinkelA - vinkelB 'regner vinkel C ud fra at vinkelsummen i en trekant er 180 grader 
+            C = vinkelC * Math.PI / 180 'Regner vinkel c fra grader til radianer
+            sideC = ((Math.Sin(C) * a1) / (Math.Sin(A))) 'Regner side c som er isoleret ud fra sinusrelationen
 
 
             'Hvis vi har Side a, Side b og Vinkel C 
@@ -127,19 +125,21 @@ Public Class Form2
 
 
 
-        End If
+        End If 'Ender If statementet
 
-        Tbox_Vavis.Text = " A:" & Format(vinkelA, "###.##")
-        Tbox_Vbvis.Text = " B:" & Format(vinkelB, "###.##")
-        Tbox_Vcvis.Text = " C:" & Format(vinkelC, "###.##")
+        Tbox_Vavis.Text = Format(vinkelA, "###.##") 'Viser værdien for Vinkel a i tilsvarende textbox
+        Tbox_Vbvis.Text = Format(vinkelB, "###.##") 'Viser værdien for Vinkel b i tilsvarende textbox
+        Tbox_Vcvis.Text = Format(vinkelC, "###.##") 'Viser værdien for Vinkel c i tilsvarende textbox
 
-        Tbox_Savis.Text = " a:" & Format(sideA, "###.##")
-        Tbox_Sbvis.Text = " b:" & Format(sideB, "###.##")
-        Tbox_Scvis.Text = " c:" & Format(sideC, "###.##")
+        Tbox_Savis.Text = Format(sideA, "###.##") 'Viser værdien for Side a i tilsvarende textbox
+        Tbox_Sbvis.Text = Format(sideB, "###.##") 'Viser værdien for Side b i tilsvarende textbox
+        Tbox_Scvis.Text = Format(sideC, "###.##") 'Viser værdien for Side c i tilsvarende textbox
 
 
 
     End Sub
 
-
+    Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed 'Kører kode nedenunder når form 2 lukker
+        End 'Stopper hele programmet
+    End Sub
 End Class
