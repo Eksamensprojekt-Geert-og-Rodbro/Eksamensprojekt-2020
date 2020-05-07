@@ -47,32 +47,30 @@
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Kode der kører når programmet åbnes
         Pbox_billeder.Image = My.Resources.Clean 'Indlæser billedet for vores trekant uden highlights
-
-
-    End Sub
-    Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click 'Aktiverer når man trykker på Tbox_Va
-        Pbox_billeder.Image = My.Resources.A
     End Sub
     Private Sub But_luk_Click(sender As Object, e As EventArgs) Handles But_luk.Click 'Aktiveres når man trykker på knappen luk
         End 'Lukker programmet
     End Sub
+    Private Sub Tbox_Va_Click(sender As Object, e As EventArgs) Handles Tbox_Va.Click 'Aktiverer når man trykker på Tbox_Va
+        Pbox_billeder.Image = My.Resources.A 'Sætter billedet i pictureboxen til at være lig med billede a stor
+    End Sub
     Private Sub Tbox_Vb_Click(sender As Object, e As EventArgs) Handles Tbox_Vb.Click 'Aktiverer når man trykker på Tbox_Vb
-        Pbox_billeder.Image = My.Resources.B
+        Pbox_billeder.Image = My.Resources.B 'Sætter billedet i pictureboxen til at være lig med billede b stor
     End Sub
     Private Sub Tbox_Vc_Click(sender As Object, e As EventArgs) Handles Tbox_Vc.Click 'Aktiverer når man trykker på Tbox_Vc
-        Pbox_billeder.Image = My.Resources.C
+        Pbox_billeder.Image = My.Resources.C 'Sætter billedet i pictureboxen til at være lig med billede c stor
     End Sub
 
     Private Sub Tbox_Sa_Click(sender As Object, e As EventArgs) Handles Tbox_Sa.Click 'Aktiverer når man trykker på Tbox_Sa
-        Pbox_billeder.Image = My.Resources.a_lille
+        Pbox_billeder.Image = My.Resources.a_lille 'Sætter billedet i pictureboxen til at være lig med billede a lille
     End Sub
 
     Private Sub Tbox_Sb_Click(sender As Object, e As EventArgs) Handles Tbox_Sb.Click 'Aktiverer når man trykker på Tbox_Sb
-        Pbox_billeder.Image = My.Resources.b_lille
+        Pbox_billeder.Image = My.Resources.b_lille 'Sætter billedet i pictureboxen til at være lig med billede b lille
     End Sub
 
     Private Sub Tbox_Sc_Click(sender As Object, e As EventArgs) Handles Tbox_Sc.Click 'Aktiverer når man trykker på Tbox_Sc
-        Pbox_billeder.Image = My.Resources.c_lille
+        Pbox_billeder.Image = My.Resources.c_lille 'Sætter billedet i pictureboxen til at være lig med billede c lille
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
