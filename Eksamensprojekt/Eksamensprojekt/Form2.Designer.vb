@@ -37,6 +37,7 @@ Partial Class Form2
         Me.Tbox_Vcvis = New System.Windows.Forms.TextBox()
         Me.Tbox_Vbvis = New System.Windows.Forms.TextBox()
         Me.Tbox_Vavis = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'But_tilbage
@@ -168,11 +169,20 @@ Partial Class Form2
         Me.Tbox_Vavis.TabIndex = 17
         Me.Tbox_Vavis.Text = "0"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(438, 97)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(215, 227)
+        Me.TextBox1.TabIndex = 31
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(812, 449)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Lbl_Sc)
         Me.Controls.Add(Me.Lbl_Sb)
         Me.Controls.Add(Me.Lbl_Sa)
@@ -188,7 +198,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Tbox_Vbvis)
         Me.Controls.Add(Me.Tbox_Vavis)
         Me.Controls.Add(Me.But_tilbage)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form2"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
@@ -211,4 +221,5 @@ Partial Class Form2
     Friend WithEvents Tbox_Vcvis As TextBox
     Friend WithEvents Tbox_Vbvis As TextBox
     Friend WithEvents Tbox_Vavis As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
