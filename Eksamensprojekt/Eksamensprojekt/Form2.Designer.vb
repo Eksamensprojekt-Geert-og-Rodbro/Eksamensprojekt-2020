@@ -37,12 +37,13 @@ Partial Class Form2
         Me.Tbox_Vcvis = New System.Windows.Forms.TextBox()
         Me.Tbox_Vbvis = New System.Windows.Forms.TextBox()
         Me.Tbox_Vavis = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Pbox_billeder1 = New System.Windows.Forms.PictureBox()
+        CType(Me.Pbox_billeder1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'But_tilbage
         '
-        Me.But_tilbage.Location = New System.Drawing.Point(561, 346)
+        Me.But_tilbage.Location = New System.Drawing.Point(627, 385)
         Me.But_tilbage.Name = "But_tilbage"
         Me.But_tilbage.Size = New System.Drawing.Size(75, 23)
         Me.But_tilbage.TabIndex = 0
@@ -169,20 +170,20 @@ Partial Class Form2
         Me.Tbox_Vavis.TabIndex = 17
         Me.Tbox_Vavis.Text = "0"
         '
-        'TextBox1
+        'Pbox_billeder1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(438, 97)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 227)
-        Me.TextBox1.TabIndex = 31
+        Me.Pbox_billeder1.Location = New System.Drawing.Point(402, 59)
+        Me.Pbox_billeder1.Name = "Pbox_billeder1"
+        Me.Pbox_billeder1.Size = New System.Drawing.Size(300, 300)
+        Me.Pbox_billeder1.TabIndex = 31
+        Me.Pbox_billeder1.TabStop = False
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(812, 449)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Pbox_billeder1)
         Me.Controls.Add(Me.Lbl_Sc)
         Me.Controls.Add(Me.Lbl_Sb)
         Me.Controls.Add(Me.Lbl_Sa)
@@ -201,6 +202,7 @@ Partial Class Form2
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form2"
         Me.Text = "Form2"
+        CType(Me.Pbox_billeder1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -221,5 +223,5 @@ Partial Class Form2
     Friend WithEvents Tbox_Vcvis As TextBox
     Friend WithEvents Tbox_Vbvis As TextBox
     Friend WithEvents Tbox_Vavis As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Pbox_billeder1 As PictureBox
 End Class

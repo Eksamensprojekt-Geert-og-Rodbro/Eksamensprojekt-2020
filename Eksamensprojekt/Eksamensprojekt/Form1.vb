@@ -21,20 +21,21 @@
         a1 = sideA 'Sætter a1 til at være lig med sideA som er indtastet på forrige form
         b1 = sideB 'Sætter b1 til at være lig med sideB som er indtastet på forrige form
         c1 = sideC 'Sætter c1 til at være lig med sideC som er indtastet på forrige form
-        Me.Text = "Udregning" 'Sætter navnet 
 
-        'Hvis vi har side a, side b og Vinkel A
-        If sideA > 0 And sideB > 0 And vinkelA > 0 Then
-            'regner VinkelB, i radian, ved hjælp af sinusrelationen
-            B = Math.Asin((Math.Sin(A) * b1) / a1)
-            'Laver radianerne for vinkelB om til grader
-            vinkelB = (180 / Math.PI) * B
-            'Udregner vinkelC ud fra vinkelsum i trekanten
-            vinkelC = 180 - vinkelA - vinkelB
-            'Laver vinkelC om til radianer så vi kan regne med dem i visual studio
-            C = vinkelC * Math.PI / 180
-            'Udregner side c ud fra sinusrelation
-            sideC = (Math.Sin(C) * a1) / Math.Sin(A)
+        If sideA <= 0 And sideB <= 0 And sideC <= 0 And vinkelA <= 0 And vinkelB <= 0 And vinkelC <= 0 Then
+            MsgBox("Indsæt værdier. Kun positive tal")
+            FejlMSG = True
+        ElseIf sideA < 0 Or sideB < 0 Or sideC < 0 Or vinkelA < 0 Or vinkelB < 0 Or vinkelC < 0 Then
+            MsgBox("Tjek lige efter fejl. Kun positive tal")
+            FejlMSG = True
+
+            'Hvis vi har side a, side b og Vinkel A
+        ElseIf sideA > 0 And sideB > 0 And vinkelA > 0 Then
+            B = Math.Asin((Math.Sin(A) * b1) / a1) 'regner VinkelB, i radian, ved hjælp af sinusrelationen
+            vinkelB = (180 / Math.PI) * B 'Laver radianerne for vinkelB om til grader
+            vinkelC = 180 - vinkelA - vinkelB 'Udregner vinkelC ud fra vinkelsum i trekanten
+            C = vinkelC * Math.PI / 180 'Laver vinkelC om til radianer så vi kan regne med dem i visual studio
+            sideC = (Math.Sin(C) * a1) / Math.Sin(A) 'Udregner side c ud fra sinusrelation
 
             'Hvis vi har Side a, Side b og Vinkel B
         ElseIf sideA > 0 And sideB > 0 And vinkelB > 0 Then
@@ -106,30 +107,34 @@
             vinkelA = Math.Round(((180 / Math.PI) * A), 2)
             sideA = (Math.Sin(A) * (b1)) / (Math.Sin(B)) 'Udregner side a ud fra sinusrelationen
 
+            'Hvis vi har alle sider
         ElseIf sideA > 0 And sideB > 0 And sideC > 0 Then
-            A = Math.Acos(((b1 ^ 2) + (c1 ^ 2) - (a1 ^ 2)) / (2 * b1 * c1))
-            vinkelA = (180 / Math.PI) * A
-
-            B = Math.Acos(((a1 ^ 2) + (c1 ^ 2) - (b1 ^ 2)) / (2 * a1 * c1))
-            vinkelB = (180 / Math.PI) * B
-
-            C = Math.Acos(((a1 ^ 2) + (b1 ^ 2) - (c1 ^ 2)) / (2 * a1 * b1))
-            vinkelC = (180 / Math.PI) * C
+            A = Math.Acos(((b1 ^ 2) + (c1 ^ 2) - (a1 ^ 2)) / (2 * b1 * c1)) 'Bruger cosinusrelation til at udregne vinkel A
+            vinkelA = (180 / Math.PI) * A 'Omregner vinkel A fra radianer til grader
+            B = Math.Acos(((a1 ^ 2) + (c1 ^ 2) - (b1 ^ 2)) / (2 * a1 * c1)) 'Bruger cosinusrelation til at udregne vinkel B
+            vinkelB = (180 / Math.PI) * B 'Omregner vinkel B fra radianer til grader
+            C = Math.Acos(((a1 ^ 2) + (b1 ^ 2) - (c1 ^ 2)) / (2 * a1 * b1)) 'Bruger cosinusrelation til at udregne vinkel C
+            vinkelC = (180 / Math.PI) * C 'Omregner vinkel C fra radianer til grader 
 
         End If 'Ender If statementet
 
-        Form2.Tbox_Vavis.Text = Format(vinkelA, "###.##") 'Viser værdien for Vinkel a i tilsvarende textbox
-        Form2.Tbox_Vbvis.Text = Format(vinkelB, "###.##") 'Viser værdien for Vinkel b i tilsvarende textbox
-        Form2.Tbox_Vcvis.Text = Format(vinkelC, "###.##") 'Viser værdien for Vinkel c i tilsvarende textbox
+        If FejlMSG = True Then
+            FejlMSG = False
+        Else
+            Form2.Tbox_Vavis.Text = Format(vinkelA, "###.##") 'Viser værdien for Vinkel a i tilsvarende textbox
+            Form2.Tbox_Vbvis.Text = Format(vinkelB, "###.##") 'Viser værdien for Vinkel b i tilsvarende textbox
+            Form2.Tbox_Vcvis.Text = Format(vinkelC, "###.##") 'Viser værdien for Vinkel c i tilsvarende textbox
 
-        Form2.Tbox_Savis.Text = Format(sideA, "###.##") 'Viser værdien for Side a i tilsvarende textbox
-        Form2.Tbox_Sbvis.Text = Format(sideB, "###.##") 'Viser værdien for Side b i tilsvarende textbox
-        Form2.Tbox_Scvis.Text = Format(sideC, "###.##") 'Viser værdien for Side c i tilsvarende textbox
+            Form2.Tbox_Savis.Text = Format(sideA, "###.##") 'Viser værdien for Side a i tilsvarende textbox
+            Form2.Tbox_Sbvis.Text = Format(sideB, "###.##") 'Viser værdien for Side b i tilsvarende textbox
+            Form2.Tbox_Scvis.Text = Format(sideC, "###.##") 'Viser værdien for Side c i tilsvarende textbox
 
-        Form2.Show() 'Viser form 2 
-        Me.Hide() 'Gemmer form 1
+            Form2.Pbox_billeder1.Image = My.Resources.Clean
 
-        Nulstiling()
+            Form2.Show() 'Viser form 2 
+            Me.Hide() 'Gemmer form 1
+            Nulstiling()
+        End If
     End Sub
 
     Private Sub But_Nulstil_Click(sender As Object, e As EventArgs) Handles But_Nulstil.Click

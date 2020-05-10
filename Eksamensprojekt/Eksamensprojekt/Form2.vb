@@ -9,5 +9,6 @@
     End Sub 'Stopper subrutinen
 
     Private Sub Form2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Pbox_billeder1.Image = My.Resources.Clean
     End Sub
 End Class'Slutter alt koden
